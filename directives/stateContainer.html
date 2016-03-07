@@ -1,0 +1,19 @@
+<div class="col-md-6">
+
+	<b>{{stateLocation[0].state}}</b>
+	{{selected}}
+
+	<div ng-repeat="location in stateLocation">
+		<label>
+		  <input
+		    type="checkbox"
+		    name="selectedLocations[]"
+		    value="{{location.name}}"
+		    ng-checked="selected.indexOf(location.id) > -1"
+		    ng-click="toggleSelection(location.id)"
+		  > {{location.name}}
+		</label>
+	</div>
+
+
+</div>
